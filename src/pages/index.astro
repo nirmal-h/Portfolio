@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Profile from '../components/Profile.astro';
+import ItemList from '../components/ItemList.astro';
+import { experienceData } from '../data/experience';
+import { educationData } from '../data/education';
+import { experienceConfig, educationConfig } from '../data/config';
+---
+
+<Layout title="Portfolio">
+  <Profile />
+  <ItemList items={experienceData} config={experienceConfig} />
+  <ItemList items={educationData} config={educationConfig} />
+</Layout>
+
+<style>
+  body {
+    background-color: black;
+    color: aliceblue;
+  }
+</style>
