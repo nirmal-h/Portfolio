@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Profile from '../components/Profile.astro';
+import Project from '../components/Project.astro';
 import ItemList from '../components/ItemList.astro';
+import Skills from '../components/Skills.astro';
 import { experienceData } from '../data/experience';
 import { educationData } from '../data/education';
 import { experienceConfig, educationConfig } from '../data/config';
@@ -11,6 +13,8 @@ import { experienceConfig, educationConfig } from '../data/config';
   <Profile />
   <ItemList items={experienceData} config={experienceConfig} />
   <ItemList items={educationData} config={educationConfig} />
+  <Project />
+  <Skills />
 </Layout>
 
 <style>

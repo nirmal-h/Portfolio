@@ -1,0 +1,40 @@
+---
+import { coreSkills, frameworksAndLibraries, cssPreprocessorsLibraries, buildToolsTaskRunners, testingFrameworksLibraries, packageManagers, stateManagement, apisDataHandling, toolsPlatforms, staticSiteGenerators, cms, ciCdTools, performanceOptimization } from "../data/skills";
+
+const categories = [
+  { title: 'Core Skills', skills: coreSkills },
+  { title: 'Frameworks and Libraries', skills: frameworksAndLibraries },
+  {
+    title: 'CSS Preprocessors and Libraries',
+    skills: cssPreprocessorsLibraries,
+  },
+  { title: 'Build Tools and Task Runners', skills: buildToolsTaskRunners },
+  {
+    title: 'Testing Frameworks and Libraries',
+    skills: testingFrameworksLibraries,
+  },
+  { title: 'Package Managers', skills: packageManagers },
+  { title: 'State Management', skills: stateManagement },
+  { title: 'APIs and Data Handling', skills: apisDataHandling },
+  { title: 'Tools and Platforms', skills: toolsPlatforms },
+  { title: 'Static Site Generators', skills: staticSiteGenerators },
+  { title: 'Content Management Systems (CMS)', skills: cms },
+  { title: 'CI/CD Tools', skills: ciCdTools },
+  { title: 'Performance Optimization', skills: performanceOptimization },
+];
+---
+
+{
+  categories.map((category) => (
+    <section class="flex flex-col gap-y-5 md:flex-row md:gap-y-0">
+      <div class="text-xl font-semibold md:w-1/3">
+        <h2>{category.title}</h2>
+      </div>
+      <div class="flex flex-wrap gap-4 md:w-2/3">
+        {category.skills.map((item) => (
+          <span class="text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{item.skill}</span>
+        ))}
+      </div>
+    </section>
+  ))
+}
