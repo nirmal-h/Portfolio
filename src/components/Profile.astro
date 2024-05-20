@@ -1,5 +1,7 @@
 ---
-const imageUrl = '/profile.jpeg'; // Path to your image in the public directory
+import { getImageUrl } from "../helpers/utils";
+
+const imageUrl = getImageUrl('assets/profile.jpeg');
 ---
 
 <div class="flex items-center justify-center">
